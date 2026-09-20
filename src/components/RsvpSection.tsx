@@ -40,7 +40,7 @@ export default function RsvpSection({ event }: RsvpSectionProps) {
   )}&location=${encodeURIComponent(event.calendarDetails.location)}&sf=true&output=xml`;
 
   return (
-    <section id="rsvp" className="w-full py-24 px-6 bg-[#080808] relative overflow-hidden">
+    <section id="rsvp" className="w-full py-24 px-6 bg-[#FAF7F2] relative overflow-hidden">
       <div className="max-w-xl mx-auto space-y-12">
         
         {/* Title */}
@@ -51,11 +51,11 @@ export default function RsvpSection({ event }: RsvpSectionProps) {
           transition={{ duration: 0.8 }}
           className="text-center space-y-3"
         >
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#D4AF37] tracking-wider uppercase">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#7A5826] tracking-wider uppercase">
             RSVP
           </h2>
-          <div className="w-24 h-0.5 bg-[#6B0908] mx-auto rounded-full" />
-          <p className="font-serif italic text-[#F3E5AB]/80 text-sm sm:text-base">
+          <div className="w-20 h-0.5 bg-[#C5A059] mx-auto rounded-full" />
+          <p className="font-serif italic text-[#6B5745] text-sm sm:text-base">
             We eagerly look forward to celebrating with you! Kindly let us know of your presence.
           </p>
         </motion.div>
@@ -66,22 +66,22 @@ export default function RsvpSection({ event }: RsvpSectionProps) {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-black/90 border border-[#D4AF37]/50 rounded-3xl p-8 sm:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.9)]"
+          className="bg-white border border-[#C5A059]/40 rounded-3xl p-8 sm:p-10 shadow-[0_20px_50px_rgba(197,160,89,0.18)]"
         >
           {isSubmitted ? (
             <div className="text-center py-8 space-y-4">
-              <div className="w-16 h-16 rounded-full bg-[#4A0404]/50 border border-[#D4AF37] flex items-center justify-center mx-auto text-[#D4AF37]">
+              <div className="w-16 h-16 rounded-full bg-[#FAF7F2] border border-[#C5A059] flex items-center justify-center mx-auto text-[#8C5E19]">
                 <CheckCircle className="w-8 h-8" />
               </div>
-              <h3 className="font-serif text-2xl text-[#D4AF37]">
+              <h3 className="font-serif text-2xl text-[#7A5826]">
                 Thank You, {formData.name}!
               </h3>
-              <p className="font-sans text-sm text-stone-300">
+              <p className="font-sans text-sm text-[#6B5745]">
                 Your response has been received with love. We can't wait to see you!
               </p>
               <button
                 onClick={() => setIsSubmitted(false)}
-                className="text-xs uppercase tracking-widest text-[#D4AF37] underline pt-4 hover:text-[#F3E5AB]"
+                className="text-xs uppercase tracking-widest text-[#8C5E19] font-semibold underline pt-4 hover:text-[#7A5826]"
               >
                 Send another response
               </button>
@@ -91,7 +91,7 @@ export default function RsvpSection({ event }: RsvpSectionProps) {
               
               {/* Full Name */}
               <div>
-                <label className="block text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2 font-medium">
+                <label className="block text-xs uppercase tracking-[0.2em] text-[#7A5826] mb-2 font-semibold">
                   Your Full Name *
                 </label>
                 <input
@@ -100,19 +100,19 @@ export default function RsvpSection({ event }: RsvpSectionProps) {
                   placeholder="e.g. Kasun Fernando"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-[#121212] border border-[#D4AF37]/40 rounded-xl px-4 py-3 text-[#F3E5AB] placeholder-stone-600 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all text-sm"
+                  className="w-full bg-[#FAF7F2] border border-[#C5A059]/40 rounded-xl px-4 py-3 text-[#2C241E] placeholder-stone-400 focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all text-sm"
                 />
               </div>
 
               {/* Attendance Choice */}
               <div>
-                <label className="block text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2 font-medium">
+                <label className="block text-xs uppercase tracking-[0.2em] text-[#7A5826] mb-2 font-semibold">
                   Will You Attend? *
                 </label>
                 <select
                   value={formData.attending}
                   onChange={(e) => setFormData({ ...formData, attending: e.target.value })}
-                  className="w-full bg-[#121212] border border-[#D4AF37]/40 rounded-xl px-4 py-3 text-[#F3E5AB] focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all text-sm"
+                  className="w-full bg-[#FAF7F2] border border-[#C5A059]/40 rounded-xl px-4 py-3 text-[#2C241E] focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all text-sm"
                 >
                   <option value="yes">Joyfully Accepts (I will be there!)</option>
                   <option value="no">Regretfully Declines (Sending blessings)</option>
@@ -122,13 +122,13 @@ export default function RsvpSection({ event }: RsvpSectionProps) {
               {/* Number of Guests */}
               {formData.attending === "yes" && (
                 <div>
-                  <label className="block text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2 font-medium">
+                  <label className="block text-xs uppercase tracking-[0.2em] text-[#7A5826] mb-2 font-semibold">
                     Number of Guests
                   </label>
                   <select
                     value={formData.guests}
                     onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                    className="w-full bg-[#121212] border border-[#D4AF37]/40 rounded-xl px-4 py-3 text-[#F3E5AB] focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all text-sm"
+                    className="w-full bg-[#FAF7F2] border border-[#C5A059]/40 rounded-xl px-4 py-3 text-[#2C241E] focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all text-sm"
                   >
                     <option value="1">1 Guest</option>
                     <option value="2">2 Guests</option>
@@ -140,7 +140,7 @@ export default function RsvpSection({ event }: RsvpSectionProps) {
 
               {/* Message to Couple */}
               <div>
-                <label className="block text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2 font-medium">
+                <label className="block text-xs uppercase tracking-[0.2em] text-[#7A5826] mb-2 font-semibold">
                   Warm Wishes / Message
                 </label>
                 <textarea
@@ -149,16 +149,16 @@ export default function RsvpSection({ event }: RsvpSectionProps) {
                   placeholder="Leave a lovely wish or blessing for Kasun & Udara..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-[#121212] border border-[#D4AF37]/40 rounded-xl px-4 py-3 text-[#F3E5AB] placeholder-stone-600 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all text-sm resize-none"
+                  className="w-full bg-[#FAF7F2] border border-[#C5A059]/40 rounded-xl px-4 py-3 text-[#2C241E] placeholder-stone-400 focus:outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all text-sm resize-none"
                 />
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#6B0908] to-[#4A0404] hover:from-[#8B0D0B] hover:to-[#5A0505] text-[#F3E5AB] border border-[#D4AF37] font-semibold text-xs tracking-[0.25em] uppercase shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#B38728] via-[#C5A059] to-[#9C7020] hover:shadow-[0_10px_25px_rgba(197,160,89,0.35)] text-white border border-[#C5A059] font-semibold text-xs tracking-[0.25em] uppercase shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
-                <Send className="w-4 h-4 text-[#D4AF37]" />
+                <Send className="w-4 h-4 text-[#FFF6D1]" />
                 <span>Confirm RSVP with Love</span>
               </button>
 
@@ -166,14 +166,14 @@ export default function RsvpSection({ event }: RsvpSectionProps) {
           )}
 
           {/* Add to Google Calendar Option */}
-          <div className="mt-6 pt-6 border-t border-[#D4AF37]/20">
+          <div className="mt-6 pt-6 border-t border-[#C5A059]/30">
             <a
               href={googleCalendarUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#141414] hover:bg-[#1E1E1E] text-[#D4AF37] border border-[#D4AF37]/40 text-xs font-sans uppercase tracking-[0.2em] font-medium transition-all duration-300"
+              className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#FAF7F2] hover:bg-[#F3EBE0] text-[#7A5826] border border-[#C5A059]/50 text-xs font-sans uppercase tracking-[0.2em] font-semibold transition-all duration-300 shadow-sm"
             >
-              <Calendar className="w-4 h-4 text-[#D4AF37]" />
+              <Calendar className="w-4 h-4 text-[#8C5E19]" />
               <span>Add to Google Calendar</span>
             </a>
           </div>

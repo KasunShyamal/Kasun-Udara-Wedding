@@ -30,16 +30,16 @@ export default function MusicPlayer({ isPlaying, onToggle, audioSrc }: MusicPlay
       <button
         onClick={onToggle}
         aria-label={isPlaying ? "Mute Background Music" : "Play Background Music"}
-        className="group relative flex items-center justify-center p-3.5 rounded-full bg-[#4A0404]/90 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/50 shadow-2xl hover:scale-110 hover:bg-[#6B0908] hover:border-[#D4AF37] transition-all duration-300"
+        className="group relative flex items-center justify-center p-3.5 rounded-full bg-white/95 backdrop-blur-md text-[#8C5E19] border border-[#C5A059] shadow-[0_6px_25px_rgba(197,160,89,0.3)] hover:scale-110 hover:bg-[#FAF7F2] transition-all duration-300"
       >
         {isPlaying ? (
           <>
-            <Volume2 className="w-5 h-5 animate-pulse text-[#F3E5AB]" />
+            <Volume2 className="w-5 h-5 animate-pulse text-[#8C5E19]" />
             {/* Spinning decorative ring when playing */}
-            <div className="absolute -inset-1 rounded-full border border-[#D4AF37]/40 animate-spin" style={{ animationDuration: "6s" }} />
+            <div className="absolute -inset-1 rounded-full border border-[#C5A059]/40 animate-spin" style={{ animationDuration: "6s" }} />
           </>
         ) : (
-          <VolumeX className="w-5 h-5 opacity-70" />
+          <VolumeX className="w-5 h-5 text-[#8C7662]" />
         )}
       </button>
     </div>

@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${montserrat.variable} ${greatVibes.variable} scroll-smooth`}>
-      <body className="bg-[#080808] text-[#F3E5AB] antialiased selection:bg-[#D4AF37] selection:text-black overflow-x-hidden font-sans">
+      <body className="bg-[#FAF7F2] text-[#2C241E] antialiased selection:bg-[#EAE0D0] selection:text-[#4A3728] overflow-x-hidden font-sans">
         {children}
       </body>
     </html>

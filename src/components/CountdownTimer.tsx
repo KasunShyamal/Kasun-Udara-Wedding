@@ -51,9 +51,9 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
   ];
 
   return (
-    <section id="countdown" className="w-full py-24 px-6 bg-gradient-to-b from-[#0A0A0A] via-[#1A0303] to-[#0A0A0A] text-center relative overflow-hidden">
+    <section id="countdown" className="w-full py-24 px-6 bg-gradient-to-b from-[#FAF7F2] via-[#F4ECE1] to-[#FAF7F2] text-center relative overflow-hidden">
       {/* Decorative center halo */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#C5A059]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto relative z-10 space-y-12">
         {/* Title & subtitle */}
@@ -64,13 +64,13 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
           transition={{ duration: 0.8 }}
           className="space-y-3"
         >
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#D4AF37] tracking-wider uppercase">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#7A5826] tracking-wider uppercase">
             Counting Down To Forever
           </h2>
-          <div className="flex items-center justify-center gap-3 text-[#F3E5AB]/80 font-serif text-sm italic">
-            <Heart className="w-3.5 h-3.5 text-[#D4AF37] fill-current" />
+          <div className="flex items-center justify-center gap-3 text-[#6B5745] font-serif text-sm italic">
+            <Heart className="w-3.5 h-3.5 text-[#C5A059] fill-current" />
             <span>Our unforgettable celebration begins in</span>
-            <Heart className="w-3.5 h-3.5 text-[#D4AF37] fill-current" />
+            <Heart className="w-3.5 h-3.5 text-[#C5A059] fill-current" />
           </div>
         </motion.div>
 
@@ -85,12 +85,12 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
           {timeUnits.map((unit, idx) => (
             <div
               key={idx}
-              className="relative flex flex-col items-center justify-center p-6 bg-black/70 backdrop-blur-md rounded-2xl border border-[#D4AF37]/40 shadow-[0_10px_30px_rgba(0,0,0,0.5)] group hover:border-[#D4AF37] transition-all duration-300"
+              className="relative flex flex-col items-center justify-center p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-[#C5A059]/30 shadow-[0_8px_25px_rgba(197,160,89,0.12)] group hover:border-[#C5A059] hover:shadow-[0_12px_30px_rgba(197,160,89,0.2)] transition-all duration-300"
             >
-              <span className="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-[#F3E5AB] group-hover:text-[#D4AF37] transition-colors">
+              <span className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-[#4A3728] group-hover:text-[#8C5E19] transition-colors">
                 {String(unit.value).padStart(2, "0")}
               </span>
-              <span className="mt-2 text-[11px] sm:text-xs font-sans uppercase tracking-[0.25em] text-[#D4AF37]/80">
+              <span className="mt-2 text-[11px] sm:text-xs font-sans uppercase tracking-[0.25em] text-[#8C7662] font-semibold">
                 {unit.label}
               </span>
             </div>

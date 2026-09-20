@@ -11,7 +11,7 @@ interface DressCodeSectionProps {
 
 export default function DressCodeSection({ dressCode }: DressCodeSectionProps) {
   return (
-    <section id="dresscode" className="w-full py-20 px-6 bg-[#0E0E0E] text-center relative overflow-hidden">
+    <section id="dresscode" className="w-full py-20 px-6 bg-[#F5ECE0]/60 text-center relative overflow-hidden">
       <div className="max-w-2xl mx-auto space-y-10">
         
         <motion.div
@@ -21,16 +21,16 @@ export default function DressCodeSection({ dressCode }: DressCodeSectionProps) {
           transition={{ duration: 0.8 }}
           className="space-y-3"
         >
-          <div className="inline-flex items-center gap-2 text-[#D4AF37]">
+          <div className="inline-flex items-center gap-2 text-[#8C5E19]">
             <Sparkles className="w-4 h-4" />
-            <span className="text-[11px] font-sans tracking-[0.3em] uppercase">Attire Guidance</span>
+            <span className="text-[11px] font-sans tracking-[0.3em] uppercase font-semibold">Attire Guidance</span>
             <Sparkles className="w-4 h-4" />
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-[#D4AF37] tracking-wider uppercase">
+          <h2 className="font-serif text-3xl sm:text-4xl text-[#7A5826] tracking-wider uppercase">
             {dressCode.title}
           </h2>
-          <div className="w-20 h-0.5 bg-[#6B0908] mx-auto rounded-full" />
-          <p className="font-serif italic text-sm sm:text-base text-[#F3E5AB]/80 max-w-md mx-auto">
+          <div className="w-20 h-0.5 bg-[#C5A059] mx-auto rounded-full" />
+          <p className="font-serif italic text-sm sm:text-base text-[#6B5745] max-w-md mx-auto">
             {dressCode.description}
           </p>
         </motion.div>
@@ -46,10 +46,10 @@ export default function DressCodeSection({ dressCode }: DressCodeSectionProps) {
           {dressCode.palette.map((color, idx) => (
             <div key={idx} className="flex flex-col items-center space-y-2 group">
               <div
-                className="w-14 h-14 rounded-full border-2 border-[#D4AF37]/50 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                className="w-14 h-14 rounded-full border-2 border-[#C5A059]/60 shadow-[0_4px_15px_rgba(197,160,89,0.18)] group-hover:scale-110 transition-transform duration-300"
                 style={{ backgroundColor: color.hex }}
               />
-              <span className="font-sans text-[10px] tracking-wider uppercase text-stone-400">
+              <span className="font-sans text-[10px] tracking-wider uppercase text-[#7A695A] font-semibold">
                 {color.name}
               </span>
             </div>

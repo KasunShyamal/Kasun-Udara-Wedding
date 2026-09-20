@@ -18,9 +18,9 @@ export default function HeroSection({ data }: HeroSectionProps) {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-between items-center px-6 py-16 overflow-hidden bg-[#0A0A0A]">
+    <section className="relative w-full min-h-screen flex flex-col justify-between items-center px-6 py-16 overflow-hidden bg-[#FAF7F2]">
       {/* Background Graphic / Radial Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#6B0908]/25 via-black/80 to-[#0A0A0A] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#EFE7D8]/80 via-[#FAF7F2] to-[#F5ECE0]/40 pointer-events-none" />
 
       {/* Top Tagline */}
       <motion.div
@@ -29,12 +29,12 @@ export default function HeroSection({ data }: HeroSectionProps) {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="relative z-10 pt-4"
       >
-        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#D4AF37]/30 bg-black/40 backdrop-blur-md">
-          <Heart className="w-3.5 h-3.5 text-[#D4AF37] fill-current" />
-          <span className="text-[11px] tracking-[0.3em] uppercase font-sans text-[#F3E5AB]">
+        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#C5A059]/40 bg-white/80 shadow-[0_2px_12px_rgba(197,160,89,0.12)] backdrop-blur-md">
+          <Heart className="w-3.5 h-3.5 text-[#C5A059] fill-current" />
+          <span className="text-[11px] tracking-[0.3em] uppercase font-sans text-[#7A5826] font-medium">
             We Are Getting Married
           </span>
-          <Heart className="w-3.5 h-3.5 text-[#D4AF37] fill-current" />
+          <Heart className="w-3.5 h-3.5 text-[#C5A059] fill-current" />
         </div>
       </motion.div>
 
@@ -45,19 +45,19 @@ export default function HeroSection({ data }: HeroSectionProps) {
         transition={{ duration: 1, delay: 0.5 }}
         className="relative z-10 text-center my-auto space-y-6"
       >
-        <h1 className="font-script text-6xl sm:text-7xl md:text-8xl lg:text-9xl gold-gradient-text drop-shadow-[0_4px_25px_rgba(212,175,55,0.2)] whitespace-nowrap">
-          {data.groom.name} <span className="text-3xl sm:text-5xl md:text-6xl text-[#D4AF37]/90 font-serif italic mx-2">&amp;</span> {data.bride.name}
+        <h1 className="font-script text-6xl sm:text-7xl md:text-8xl lg:text-9xl gold-gradient-text drop-shadow-sm whitespace-nowrap">
+          {data.groom.name} <span className="text-3xl sm:text-5xl md:text-6xl text-[#C5A059] font-serif italic mx-2">&amp;</span> {data.bride.name}
         </h1>
 
         <div className="flex items-center justify-center gap-4 max-w-sm mx-auto">
-          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#D4AF37]/70" />
-          <p className="font-serif text-lg md:text-xl tracking-[0.2em] uppercase text-[#F3E5AB] font-light">
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#C5A059]/70" />
+          <p className="font-serif text-lg md:text-xl tracking-[0.2em] uppercase text-[#4A3728] font-light">
             {data.event.displayDate}
           </p>
-          <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#D4AF37]/70" />
+          <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#C5A059]/70" />
         </div>
 
-        <p className="font-sans text-xs md:text-sm tracking-[0.25em] text-[#D4AF37]/80 uppercase">
+        <p className="font-sans text-xs md:text-sm tracking-[0.25em] text-[#8C5E19] uppercase font-medium">
           {data.event.venue.split(",")[0]}
         </p>
       </motion.div>
@@ -70,11 +70,11 @@ export default function HeroSection({ data }: HeroSectionProps) {
         className="relative z-10 flex flex-col items-center cursor-pointer"
         onClick={scrollToNext}
       >
-        <span className="text-[11px] tracking-[0.25em] uppercase text-[#F3E5AB]/60 font-sans mb-1">
+        <span className="text-[11px] tracking-[0.25em] uppercase text-[#8C7662] font-sans mb-1 font-medium">
           Scroll to explore
         </span>
         <div className="animate-bounce">
-          <ChevronDown className="w-5 h-5 text-[#D4AF37]" />
+          <ChevronDown className="w-5 h-5 text-[#C5A059]" />
         </div>
       </motion.div>
     </section>
