@@ -45,10 +45,8 @@ export default function HeroSection({ data }: HeroSectionProps) {
         transition={{ duration: 1, delay: 0.5 }}
         className="relative z-10 text-center my-auto space-y-6"
       >
-        <h1 className="font-script text-7xl sm:text-8xl md:text-9xl gold-gradient-text drop-shadow-[0_4px_25px_rgba(212,175,55,0.2)]">
-          {data.groom.name} <br className="sm:hidden" />
-          <span className="text-4xl sm:text-6xl text-[#D4AF37]/90 font-serif italic mx-3">&</span>
-          <br className="sm:hidden" /> {data.bride.name}
+        <h1 className="font-script text-6xl sm:text-7xl md:text-8xl lg:text-9xl gold-gradient-text drop-shadow-[0_4px_25px_rgba(212,175,55,0.2)] whitespace-nowrap">
+          {data.groom.name} <span className="text-3xl sm:text-5xl md:text-6xl text-[#D4AF37]/90 font-serif italic mx-2">&amp;</span> {data.bride.name}
         </h1>
 
         <div className="flex items-center justify-center gap-4 max-w-sm mx-auto">

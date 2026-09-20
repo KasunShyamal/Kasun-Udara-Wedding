@@ -50,8 +50,8 @@ export default function SplashCover({ isOpen, onOpen, groomName, brideName }: Sp
               transition={{ delay: 0.4, duration: 0.8 }}
               className="my-auto space-y-4"
             >
-              <h1 className="font-script text-6xl md:text-7xl gold-gradient-text drop-shadow-md">
-                {groomName} & {brideName}
+              <h1 className="font-script text-5xl sm:text-6xl md:text-7xl gold-gradient-text drop-shadow-md whitespace-nowrap">
+                {groomName} &amp; {brideName}
               </h1>
               <div className="flex items-center justify-center gap-3">
                 <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4AF37]/60" />
